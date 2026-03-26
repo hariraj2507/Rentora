@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #fafafa;
+    --text-color: #0f172a; /* Slate 900 */
+    --border-color: #e2e8f0; /* Slate 200 */
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --primary-glow: rgba(79, 70, 229, 0.15);
+  }
+
+  .dark {
+    --bg-color: #020617; /* Deepest Navy */
+    --text-color: #f8fafc; /* Slate 50 */
+    --border-color: #1e293b; /* Slate 800 */
+    --card-bg: rgba(15, 23, 42, 0.6);
+    --primary-glow: rgba(99, 102, 241, 0.2);
+  }
+
+  body {
+    @apply bg-[var(--bg-color)] text-[var(--text-color)] font-body antialiased transition-all duration-500 min-h-screen text-[15px] leading-relaxed;
+    background-color: var(--bg-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight font-bold text-slate-900 dark:text-white leading-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-[var(--card-bg)] backdrop-blur-xl border border-[var(--border-color)] shadow-xl rounded-2xl;
+  }
+  
+  .glass-darker {
+    @apply bg-white/5 dark:bg-slate-900/40 backdrop-blur-2xl border border-white/20 dark:border-white/10 shadow-lg rounded-2xl;
+  }
+
+  .premium-shadow {
+    box-shadow: 
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -4px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-indigo-500 via-primary-600 to-accent-500 dark:from-indigo-400 dark:via-primary-400 dark:to-accent-400 font-bold;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary-500/20 active:scale-[0.98];
+  }
+
+  .glow-primary {
+    @apply shadow-[0_0_20px_-5px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_-5px_rgba(79,70,229,0.5)] transition-all;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}

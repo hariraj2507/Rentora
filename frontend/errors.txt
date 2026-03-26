@@ -1,0 +1,23 @@
+﻿src/components/layout/Footer.tsx(1,19): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/components/layout/Footer.tsx(1,27): error TS2305: Module '"lucide-react"' has no exported member 'Twitter'.
+src/components/layout/Footer.tsx(1,36): error TS2305: Module '"lucide-react"' has no exported member 'Linkedin'.
+src/components/layout/Navbar.tsx(3,29): error TS6133: 'User' is declared but its value is never read.
+src/pages/Booking.tsx(23,9): error TS6133: 'id' is declared but its value is never read.
+src/pages/Dashboard.tsx(114,26): error TS2304: Cannot find name 'User'.
+src/pages/ItemDetail.tsx(2,1): error TS6133: 'motion' is declared but its value is never read.
+src/pages/Landing.tsx(2,40): error TS6133: 'Repeat' is declared but its value is never read.
+src/pages/Landing.tsx(115,35): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[] | undefined'.
+src/pages/Profile.tsx(2,29): error TS6133: 'Package' is declared but its value is never read.
+src/pages/Profile.tsx(57,18): error TS2304: Cannot find name 'CheckCircle2'.
+src/pages/Profile.tsx(60,18): error TS2304: Cannot find name 'CheckCircle2'.
+src/pages/Profile.tsx(63,18): error TS2304: Cannot find name 'CheckCircle2'.
